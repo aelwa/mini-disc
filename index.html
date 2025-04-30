@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MiniDisc Lyric Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- p5 core (and optionally p5.sound if you choose) -->
+  <script src="libs/p5.min.js"></script>
+  <!-- Vosk scripts (for Phase 4 later) -->
+  <script src="libs/worker.js"></script>
+  <script src="libs/vosk.js"></script>
+</head>
+<body>
+  <h1>MiniDisc Lyric Visualizer</h1>
+
+  <!-- file input disabled until model loads -->
+  <input id="fileInput" type="file" accept="audio/*" disabled />
+
+  <!-- loader message while Vosk model is initializing -->
+  <div id="loader">Loading speech model…</div>
+
+  <!-- p5 will attach this canvas automatically -->
+  <canvas id="visualizer"></canvas>
+
+  <!-- your sketch (and later code to wire up Vosk) -->
+  <script src="sketch.js"></script>
+</body>
+</html>
