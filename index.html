@@ -1,9 +1,29 @@
-<!-- p5.js libraries -->
-<script src="libs/p5.min.js"></script>
-<script src="libs/p5.sound.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MiniDisc Lyric Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- p5 core + sound -->
+  <script src="libs/p5.min.js"></script>
+  <script src="libs/p5.sound.min.js"></script>
+</head>
+<body>
+  <h1>MiniDisc Lyric Visualizer</h1>
 
-<!-- Vosk Browser (includes its WebWorker) -->
-<script src="https://cdn.jsdelivr.net/npm/vosk-browser@0.0.5/dist/vosk.js"></script>
+  <!-- disabled until we load the speech model -->
+  <input id="fileInput" type="file" accept="audio/*" disabled />
 
-<!-- Your sketch -->
-<script src="sketch.js"></script>
+  <!-- shown while Vosk is initializing -->
+  <div id="loader">Loading speech model…</div>
+
+  <!-- container for p5’s canvas -->
+  <div id="visualizer-container"></div>
+
+  <!-- Vosk (we’ll wire this up next) -->
+  <script src="https://cdn.jsdelivr.net/npm/vosk-browser@0.0.5/dist/vosk.js"></script>
+
+  <!-- your sketch -->
+  <script src="sketch.js"></script>
+</body>
+</html>
