@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <title>MiniDisc Lyric Visualizer</title>
   <link rel="stylesheet" href="style.css" />
   <!-- p5 core + sound -->
@@ -11,19 +11,19 @@
 <body>
   <h1>MiniDisc Lyric Visualizer</h1>
 
-  <!-- disabled until we load the speech model -->
+  <!-- disabled until model loads -->
   <input id="fileInput" type="file" accept="audio/*" disabled />
 
-  <!-- shown while Vosk is initializing -->
+  <!-- shows “Loading…” while we hook up speech -->
   <div id="loader">Loading speech model…</div>
 
-  <!-- container for p5’s canvas -->
+  <!-- p5 will attach its canvas here -->
   <div id="visualizer-container"></div>
 
-  <!-- Vosk (we’ll wire this up next) -->
+  <!-- Vosk runtime (we’ll call it in sketch.js) -->
   <script src="https://cdn.jsdelivr.net/npm/vosk-browser@0.0.5/dist/vosk.js"></script>
 
-  <!-- your sketch -->
+  <!-- your sketch that draws the disc -->
   <script src="sketch.js"></script>
 </body>
 </html>
